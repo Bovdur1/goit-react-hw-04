@@ -24,6 +24,7 @@ function App() {
   const [error, setError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [page, setPage] = useState(1);
+  const [totalPage, setTotalPage] = useState(0);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [imageModal, setImageModal] = useState(initialImageModalData);
 
@@ -43,6 +44,7 @@ function App() {
         setImages((prevImages) => {
           return [...prevImages, ...response.data.results];
         });
+        setTotalPage(response.data.total_pages);
       } catch (error) {
         setError(true);
       } finally {
@@ -57,6 +59,7 @@ function App() {
     setQuery(newQuery);
     setImages([]);
     setPage(1);
+    setTotalPage(0);
   };
 
   const handleLoadMore = () => {
@@ -80,7 +83,7 @@ function App() {
         <ImageGallery images={images} openModal={openModal} />
       )}
       {error && <ErrorMessage />}
-      {images.length > 0 && !isLoading && (
+      {images.length > 0 && !isLoading && totalPage > 1 && (
         <LoardMoreBtn onClick={handleLoadMore} />
       )}
       {isLoading && <Loader />}
