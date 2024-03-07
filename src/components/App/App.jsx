@@ -94,7 +94,7 @@ function App() {
         imageModal={imageModal}
       />
 
-      <Toaster position="top-left" />
+      <Toaster position="bottom-center" />
     </>
   );
 }
