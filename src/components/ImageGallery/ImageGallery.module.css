@@ -1,0 +1,12 @@
+.gallery {
+    width: 1250px;
+    padding: 64px 15px 15px 15px;
+    margin: 0 auto;
+    column-count: 4;
+    column-gap: 16px;
+}
+
+.item {
+    break-inside: avoid;
+    margin-bottom: 16px;
+}

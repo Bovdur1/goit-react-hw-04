@@ -1,0 +1,9 @@
+.loardMoreBtn {
+    margin-bottom: 16px;
+    color: #000;
+    background-color: #fff;
+}
+
+.loardMoreBtn:hover {
+    background-color: #cecdcd;
+}

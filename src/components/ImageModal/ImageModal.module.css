@@ -1,0 +1,93 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+    background-color: #0a0a0a97;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    background-color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
+
+.modal {
+    color: rgb(0, 0, 0);
+    display: flex;
+    border-radius: 20px;
+    padding: 16px;
+    gap: 16px;
+}
+
+.image {
+    max-width: 980px;
+    max-height: 600px;
+    height: auto;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.imageData {
+    width: 280px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #1a1a1a;
+    padding: 4px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    transition: transform 0.25s;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+    background-color: #373737;
+    transform: scale(1.1);
+}
+
+.author {
+    display: flex;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    align-items: center;
+}
+
+.authorPhoto {
+    border-radius: 50%;
+}
+
+.description {
+    color: #242424bb;
+}
+
+.tagList {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    color: #fff;
+    background-color: #9f9e9e;
+    padding: 2px 4px;
+    border-radius: 8px;
+}
